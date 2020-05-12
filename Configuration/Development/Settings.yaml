@@ -1,0 +1,24 @@
+Flowpack:
+  ElasticSearch:
+    clients:
+      # default elasticsearch client
+      default:
+        - host: elasticsearch
+          port: 9200
+        - host: elasticsearch
+          port: 9200
+
+Neos:
+  Neos:
+    # We reset this setting for the Development Context to avoid issues using site:import throwing the error
+    # >>> DefaultSiteNode davshop not found or not active <<<
+    # NOTE: this should be refined in a multi-site dev environment if needed
+    defaultSiteNodeName: null
+  Flow:
+    log:
+      systemLogger:
+        backendOptions:
+          severityThreshold: '%LOG_INFO%'
+      securityLogger:
+        backendOptions:
+          severityThreshold: '%LOG_INFO%'

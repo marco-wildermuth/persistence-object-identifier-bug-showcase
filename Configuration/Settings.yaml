@@ -1,0 +1,47 @@
+Neos:
+  Flow:
+    persistence:
+      backendOptions:
+        driver:   pdo_mysql
+        dbname: "db"
+        user: "admin"
+        password: "pass"
+        host: "db"
+        port: 3306
+    i18n:
+      defaultLocale: de
+      fallbackRule:
+        order:
+          - de
+          - en
+    error:
+      exceptionHandler:
+        renderingGroups:
+          notFoundExceptions:
+            options:
+              variables:
+                path: '404'
+  Imagine:
+    driver: Imagick
+  Neos:
+    # If a node name is specified here it will be used as default siteNode
+    # which is displayed if no domain pattern matches the current request
+    defaultSiteNodeName: davshop
+
+Flowpack:
+  ElasticSearch:
+    ContentRepositoryAdaptor:
+      driver:
+        version: 2.x
+    clients:
+      # default elasticsearch client
+      default:
+        - host: elasticsearch
+          port: 9200
+        - host: elasticsearch
+          port: 9200
+      daze:
+        - host: elasticsearch
+          port: 9200
+        - host: elasticsearch
+          port: 9200
