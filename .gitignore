@@ -1,0 +1,15 @@
+*~
+
+# User-specific stuff
+/.idea
+
+/Build/
+/Data/
+/Packages/
+/Web/
+/bin/
+
+/"
+deploy_rsa
+deploy_rsa.pub
+.env
